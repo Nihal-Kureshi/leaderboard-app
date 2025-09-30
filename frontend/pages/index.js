@@ -22,7 +22,7 @@ export default function Home() {
   const [leaderboardData, setLeaderboardData] = useState(mockData)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const [sortBy, setSortBy] = useState('day')
+  const [sortBy, setSortBy] = useState('')
   const [highlightedUserId, setHighlightedUserId] = useState('1')
 
   const fetchLeaderboard = async (filter = sortBy, search = '') => {
