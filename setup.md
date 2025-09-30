@@ -22,14 +22,16 @@ MONGO_URI=mongodb://localhost:27017/leaderboardDB
 PORT=5000
 ```
 
-4. Start the backend server:
+4. Seed the database with dummy data:
 ```bash
-npm start
+sudo systemctl start mongod
+sudo systemctl enable mongod
+npm run seed
 ```
 
-5. Seed the database with dummy data:
+5. Start the backend server:
 ```bash
-curl -X POST http://localhost:5000/api/seed
+npm start
 ```
 
 ## Frontend Setup
