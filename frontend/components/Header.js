@@ -39,6 +39,7 @@ export default function Header({ onRecalculate, onFilter, onSortChange, userIdFi
             onChange={(e) => onSortChange(e.target.value)}
             className="bg-gray-700 border border-gray-600 rounded px-3 py-2 text-white focus:outline-none focus:border-blue-500"
           >
+            <option value="">All Time</option>
             <option value="day">Day</option>
             <option value="month">Month</option>
             <option value="year">Year</option>
