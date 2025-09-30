@@ -19,7 +19,7 @@ npm install
 3. Create/update .env file:
 ```bash
 MONGO_URI=mongodb://localhost:27017/leaderboardDB
-PORT=5000
+PORT=3001
 ```
 
 4. Seed the database with dummy data:
