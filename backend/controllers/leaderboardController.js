@@ -67,8 +67,14 @@ exports.getLeaderboard = async (req, res) => {
             const searchIndex = users.findIndex(u => u.userId === search);
             if (searchIndex > -1) {
                 const [user] = users.splice(searchIndex, 1);
+                // Filter out other 0 point records, keep only searched user and non-zero records
+                users = users.filter(u => u.totalPoints > 0);
                 users.unshift(user);
+            } else {
+                users = users.filter(u => u.totalPoints > 0);
             }
+        } else {
+            users = users.filter(u => u.totalPoints > 0);
         }
 
         res.json({ count: users.length, data: users });
